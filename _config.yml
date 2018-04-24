@@ -123,11 +123,6 @@ fancybox: true
 favicon: favicon.png
 duoshuo_shortname: #freemindtheme
 
-# Recommended posts
-# Dependency: https://github.com/huiwang/hexo-recommended-posts
-recommended_posts:
-  enabled: false
-
 # Analytics
 google_analytics:
   enable: false
