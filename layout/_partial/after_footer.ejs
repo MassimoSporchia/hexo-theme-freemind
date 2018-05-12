@@ -9,6 +9,12 @@
 <script src="<%- config.root %>js/main.js"></script>
 <script src="<%- config.root %>js/search.js"></script> 
 
+<script type="text/javascript">
+  var cl = cloudinary.Cloudinary.new({cloud_name: "dmrsszme8"}); 
+  // replace 'demo' with your cloud name in the line above 
+  cl.responsive();
+</script>
+
 <% if (theme.fancybox){ %>
 <link rel="stylesheet" href="<%- config.root %>fancybox/jquery.fancybox.css" media="screen" type="text/css">
 <script src="<%- config.root %>fancybox/jquery.fancybox.pack.js"></script>
