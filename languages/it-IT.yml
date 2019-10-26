@@ -5,6 +5,7 @@ tagcloud: "Tag Cloud"
 tweets: Tweets
 prev: Precedente
 next: Successivo
+about: Chi sono
 comment: Commenti
 archive_a: Archivio
 archive_b: "Archivio: %s"

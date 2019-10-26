@@ -1,14 +1,12 @@
-#slogan: "Yet another bootstrap theme."
-
-theme: empty
+theme: foodica
 inverse: true
 
 menu:
-  - title: Archives
+  - title: archive_a
     url: archives
     intro: "All the articles."
     icon: "fa fa-archive"
-  - title: Categories
+  - title: categories
     url: categories
     intro: "All the categories."
     icon: "fa fa-folder"
@@ -16,7 +14,7 @@ menu:
     url: tags
     intro: "All the tags."
     icon: "fa fa-tags"
-  - title: About
+  - title: about
     url: about
     intro: "About me."
     icon: "fa fa-user"
@@ -50,9 +48,6 @@ duoshuo_shortname: #freemindtheme
 
 # Analytics
 google_analytics:
-  enable: false
-  siteid:
-baidu_tongji:
   enable: false
   siteid:
 

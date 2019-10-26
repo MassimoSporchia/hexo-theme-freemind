@@ -1,48 +1,42 @@
-<div class="row page">
+<section class="content-area">
+	<section id="recent-posts" class="recent-posts">
 
-	<% if (theme.widgets.length) { %>
-	<div class="col-md-9">
-	<% } else { %>
-	<div class="col-md-12">
-	<% } %>
-
-		<%- partial('post/slogan') %>
-		<div id="top_search"></div>
-		<div class="mypage">
-		
 		<!-- title and entry -->
-        <!-- render top articles firstly -->
-        <% if (page.current == 1) { %>
+		<!-- render top articles firstly -->
+		<% if (page.current == 1) { %>
 		<% site.posts.each(function(item){ %>
-            <% if (item.top) { %>
-			  <%- partial('post/title_top', {item: item, index: index}) %>
-			  <%- partial('post/entry', {item: item, index: index}) %>
-            <% } %>
-		<% }); %>
-        <% } %>
-        <!-- render other articles -->
-        <% page.posts.each(function(item){ %>
-           <% if (!item.top) { %>
-			  <%- partial('post/title', {item: item, index: index}) %>
-			  <%- partial('post/entry', {item: item, index: index}) %>
-           <% } %>
-		<% }); %>
 
-		</div>
+		<% if (item.top) { %>
+		<%- partial('post/title_top', {item: item, index: index}) %>
+		<%- partial('post/entry', {item: item, index: index}) %>
+		<% } %>
+		<% }); %>
+		<% } %>
+		<!-- render other articles -->
+		<% page.posts.each(function(item){ %>
+		<% if (!item.top) { %>
+		<article class="regular-post post type-post status-publish format-standard has-post-thumbnail hentry">
+			<%- partial('post/thumb', {item: item, index: index}) %>
+			<section class="entry-body">
+				<%- partial('post/title', {item: item, index: index}) %>
+				<%- partial('post/entry', {item: item, index: index}) %>
+			</section>
+			<% } %>
+		</article>
+		<% }); %>
 
 		<!-- pagination -->
 		<div>
-  		<center>
-		<%- partial('index_pagination') %>
-  		</center>
+			<center>
+				<%- partial('index_pagination') %>
+			</center>
 		</div>
 
-		
-		
-	</div> <!-- col-md-9 -->
 
-	<% if (theme.widgets.length) { %>
+
+		<% if (theme.widgets.length) { %>
 		<%- partial('sidebar') %>
-	<% } %>
-	
-</div> <!-- row-fluid -->
+		<% } %>
+
+	</section>
+</section> <!-- row-fluid -->

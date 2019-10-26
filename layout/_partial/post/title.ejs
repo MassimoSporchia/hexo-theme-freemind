@@ -7,10 +7,13 @@
 <% } else { %>
 	<% if (index) { %>
 	<!-- display as entry -->	
-		<h3 class="title">
-			<div class="date"> <%= item.date.format(config.date_format) %> </div>
-			<div class="article-title"><a href="<%- config.root %><%- item.path %>" <% if(item.description) { %>title="<%= item.description %>"<% } %>><%= item.title %></a></div>						
+		<h3 class="entry-title">
+			<a href="<%- config.root %><%- item.path %>" <% if(item.description) { %>title="<%= item.description %>"<% } %>><%= item.title %></a>
 		</h3>
+		<div class="entry-meta">
+			<span class="entry-date"> <%= item.date.format(config.date_format) %> </span>
+			<!-- TODO:inserire l'integrazione con i commenti facebook -->
+		</div>
 	<% } else { %>
 		<div class="page-header <% if (theme.inverse){ %>page-header-inverse <% } %>">		
 			<h1 class="title <% if (theme.inverse){ %>title-inverse <% } %>"><% if (item.icon) { %> <i class="<%= item.icon %>"></i> <% } %> <% if (item.page_title) { %><%= item.page_title %><% }else{ %><%= item.title %><% } %></h1>
